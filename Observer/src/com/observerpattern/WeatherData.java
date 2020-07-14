@@ -3,21 +3,21 @@ package com.observerpattern;
 import java.util.ArrayList;
 
 public class WeatherData implements Subject{
-    private ArrayList<Observer> observers;
+    private ArrayList<Observable> observers;
     private float temperature;
     private float humidity;
     private float pressure;
 
     public WeatherData(){
-        observers = new ArrayList<Observer>();
+        observers = new ArrayList<Observable>();
     }
     @Override
-    public void registerObserver(Observer o){
+    public void registerObserver(Observable o){
         observers.add(o);
     }
 
     @Override
-    public void removeObserver(Observer o) {
+    public void removeObserver(Observable o) {
         int i = observers.indexOf(o);
         if(i >= 0){
             observers.remove(i);
@@ -26,7 +26,7 @@ public class WeatherData implements Subject{
 
     @Override
     public void notifyObservers() {
-        for(Observer observer : observers){
+        for(Observable observer : observers){
             observer.update(temperature, humidity, pressure);
         }
     }

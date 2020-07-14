@@ -1,5 +1,5 @@
 package com.observerpattern;
 
-public interface Observer {
+public interface Observable {
     public void update(float temp, float humidity, float pressure);
 }

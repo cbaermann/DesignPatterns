@@ -1,6 +1,6 @@
 package com.observerpattern;
 
-public class CurrentConditionsDisplay implements Observer, DisplayElement{
+public class CurrentConditionsDisplay implements Observable, DisplayElement{
     private float temperature;
     private float humidity;
     private Subject weatherData;

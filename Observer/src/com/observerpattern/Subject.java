@@ -1,7 +1,7 @@
 package com.observerpattern;
 
 public interface Subject {
-    public void registerObserver(Observer o);
-    public void removeObserver(Observer o);
+    public void registerObserver(Observable o);
+    public void removeObserver(Observable o);
     public void notifyObservers();
 }
